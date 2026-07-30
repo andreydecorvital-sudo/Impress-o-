@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Otimize etiquetas ZPL de marketplace em uma página, preservando os dados essenciais para impressão." />
+  <title>Etiqueta ZPL Otimizada</title>
+  <style>
+    :root{--ink:#111;--paper:#f4f1ea;--card:#fff;--muted:#6e6a63;--line:#d8d2c7;--accent:#6d3df5;--ok:#137a4b;--danger:#b42318}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,textarea,input{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+    header{padding:24px 0;border-bottom:1px solid var(--line);background:rgba(244,241,234,.92);position:sticky;top:0;z-index:10;backdrop-filter:blur(14px)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em}.mark{width:42px;height:42px;border:2px solid var(--ink);border-radius:12px;display:grid;place-items:center;background:var(--ink);color:white}.mark span{font-size:13px;line-height:.9;text-align:center}
+    main{padding:42px 0 64px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:end;margin-bottom:26px}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(42px,7vw,82px);line-height:.91;letter-spacing:-.075em;margin:12px 0 18px;max-width:760px}.hero p{font-size:18px;line-height:1.55;color:var(--muted);max-width:650px}.promise{background:var(--ink);color:white;border-radius:24px;padding:24px}.promise strong{display:block;font-size:22px;margin-bottom:12px}.promise ul{padding:0;margin:0;list-style:none;display:grid;gap:10px}.promise li:before{content:"✓";color:#a98cff;font-weight:900;margin-right:9px}
+    .workspace{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 14px 40px rgba(17,17,17,.05)}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}.panel h2{font-size:22px;margin:0;letter-spacing:-.035em}.panel small{color:var(--muted)}
+    textarea{width:100%;min-height:430px;resize:vertical;border:1px solid var(--line);border-radius:16px;padding:16px;background:#fbfaf7;color:#191816;line-height:1.45;font-family:"SFMono-Regular",Consolas,monospace;font-size:13px;outline:none}textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(109,61,245,.12)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:850}.primary{background:var(--accent);color:white}.secondary{background:var(--ink);color:white}.ghost{background:#ece8df;color:var(--ink)}.btn:disabled{opacity:.45;cursor:not-allowed}
+    .status{min-height:22px;margin-top:12px;font-size:14px;font-weight:700}.status.ok{color:var(--ok)}.status.error{color:var(--danger)}
+    .preview{min-height:430px;border:1px dashed #bcb5a9;border-radius:16px;background:#fdfcf9;padding:18px;display:flex;flex-direction:column;gap:12px}.empty{margin:auto;text-align:center;color:var(--muted);max-width:300px}.label{width:min(100%,460px);margin:auto;background:white;border:2px solid #111;padding:16px;box-shadow:0 14px 35px rgba(0,0,0,.08);font-family:Arial,sans-serif}.label-top{display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid #111;padding-bottom:10px}.route{font-size:30px;font-weight:900}.market{font-weight:900}.section{padding:11px 0;border-bottom:2px solid #111}.section:last-child{border:0}.section-title{font-size:11px;font-weight:900;letter-spacing:.08em}.big{font-size:20px;font-weight:900;line-height:1.15;margin-top:4px;word-break:break-word}.meta{font-size:13px;line-height:1.35;margin-top:4px}.order-grid{display:grid;grid-template-columns:1fr 84px;gap:8px}.order-box{border:3px solid #111;padding:10px}.qty{text-align:center}.barcode{height:68px;margin-top:10px;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 5px,transparent 5px 8px)}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.fact{border-top:1px solid var(--line);padding-top:14px}.fact strong{display:block;font-size:15px}.fact span{font-size:13px;color:var(--muted)}
+    footer{padding:28px 0 44px;color:var(--muted);font-size:13px}.hidden{display:none!important}
+    @media(max-width:900px){.hero,.workspace{grid-template-columns:1fr}.hero{align-items:start}.promise{order:2}.facts{grid-template-columns:1fr}.panel{padding:14px}textarea,.preview{min-height:360px}header{position:static}}
+    @media(max-width:520px){.wrap{width:min(100% - 20px,1180px)}main{padding-top:28px}h1{font-size:48px}.panel-head{display:block}.panel-head small{display:block;margin-top:5px}.actions .btn{flex:1 1 100%}.label{padding:11px}.big{font-size:17px}.route{font-size:24px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand"><div class="mark"><span>ZPL<br>1P</span></div><div>Etiqueta ZPL Otimizada</div></div></div></header>
+<main class="wrap">
+  <section class="hero">
+    <div><div class="eyebrow">Ferramenta manual de impressão</div><h1>Duas páginas viram uma etiqueta legível.</h1><p>Cole o ZPL original, revise os dados encontrados e gere uma cópia compacta em uma página. O texto original permanece intacto no campo de entrada.</p></div>
+    <aside class="promise"><strong>O que a ferramenta preserva</strong><ul><li>Código de barras e QR code</li><li>Destinatário, endereço e CEP</li><li>Pedido, rastreio e rota logística</li><li>Produto, quantidade e SKU em destaque</li></ul></aside>
+  </section>
+
+  <section class="workspace">
+    <article class="panel">
+      <div class="panel-head"><div><h2>1. Cole o ZPL original</h2><small>Aceita uma ou várias etiquetas entre ^XA e ^XZ.</small></div><small id="counter">0 caracteres</small></div>
+      <textarea id="input" spellcheck="false" placeholder="^XA&#10;...cole aqui o ZPL completo...&#10;^XZ"></textarea>
+      <div class="actions"><button class="btn primary" id="optimize">Otimizar etiquetas</button><button class="btn ghost" id="example">Usar exemplo</button><button class="btn ghost" id="clear">Limpar</button></div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </article>
+
+    <article class="panel">
+      <div class="panel-head"><div><h2>2. Revise e exporte</h2><small>Prévia estrutural antes da impressão real.</small></div><small id="labelCount">0 etiquetas</small></div>
+      <div id="preview" class="preview"><div class="empty"><strong>Nenhuma etiqueta processada.</strong><br>Cole um ZPL válido e clique em “Otimizar etiquetas”.</div></div>
+      <div class="actions"><button class="btn secondary" id="copy" disabled>Copiar ZPL</button><button class="btn primary" id="download" disabled>Baixar .txt</button></div>
+    </article>
+  </section>
+
+  <section class="facts"><div class="fact"><strong>Original preservado</strong><span>A transformação gera uma cópia e nunca apaga o texto colado.</span></div><div class="fact"><strong>Dados sem invenção</strong><span>Campos não encontrados ficam sinalizados para revisão manual.</span></div><div class="fact"><strong>Impressão responsável</strong><span>Valide tamanho e DPI na sua impressora antes de usar em produção.</span></div></section>
+</main>
+<footer><div class="wrap">Etiqueta ZPL Otimizada · Processamento local no navegador.</div></footer>
+<script>
+const $=s=>document.querySelector(s);let output='';
+const input=$('#input'),status=$('#status'),preview=$('#preview'),copy=$('#copy'),download=$('#download');
+input.addEventListener('input',()=>$('#counter').textContent=`${input.value.length.toLocaleString('pt-BR')} caracteres`);
+const clean=s=>s.replace(/\\&/g,' ').replace(/\s+/g,' ').trim();
+function fields(zpl){
+ const fds=[...zpl.matchAll(/\^FD([\s\S]*?)\^FS/g)].map(m=>clean(m[1])).filter(Boolean);
+ const find=(rx)=>fds.find(x=>rx.test(x))||'';
+ const cep=find(/\b\d{5}-?\d{3}\b/); const pedido=find(/pedido|order|n[ºo°]?\s*do\s*pedido/i); const rastreio=find(/rastreio|tracking|BR\w{8,}/i);
+ const rota=find(/\b[A-Z]{2,5}\d{1,4}\b|rota|regi[aã]o/i); const sku=find(/sku|ref\.?|c[oó]d\.?\s*produto/i); const qtd=find(/qtd|quantidade|\b\d+\s*x\b/i);
+ const produto=fds.find(x=>x.length>12&&!/destinat|endere|pedido|rastre|tracking|cep|remetente|shopee|mercado livre|amazon|sku|qtd|quantidade/i.test(x))||'';
+ const destinatario=find(/destinat|recebedor|cliente/i)||fds.find(x=>/^[A-Za-zÀ-ÿ' ]{8,}$/.test(x)&&x.split(' ').length>=2)||'';
+ const endereco=fds.find(x=>/rua|av\.?|avenida|alameda|travessa|rodovia|estrada|n[ºo°]\s*\d/i.test(x))||'';
+ return {fds,cep,pedido,rastreio,rota,sku,qtd,produto,destinatario,endereco};
+}
+function valueAfterLabel(v){return clean(v.replace(/^(destinat[aá]rio|cliente|pedido|order|rastreio|tracking|rota|regi[aã]o|sku|ref\.?|qtd|quantidade)\s*[:\-]?\s*/i,''))}
+function escapeZpl(v){return (v||'NÃO IDENTIFICADO').replace(/[\^~]/g,' ').slice(0,70)}
+function build(data,source){
+ const barcode=(source.match(/\^(BC|B3|BQ)[\s\S]*?\^FS/g)||[]).slice(0,2).join('\n');
+ return `^XA\n^CI28\n^PW800\n^LL1180\n^LH0,0\n^FO25,20^GB750,1100,4^FS\n^FO45,40^A0N,70,70^FD${escapeZpl(valueAfterLabel(data.rota)||'ROTA')}^FS\n^FO45,125^GB710,3,3^FS\n^FO45,145^A0N,25,25^FDDESTINATÁRIO^FS\n^FO45,180^A0N,43,43^FD${escapeZpl(valueAfterLabel(data.destinatario))}^FS\n^FO45,235^A0N,30,30^FD${escapeZpl(data.endereco)}^FS\n^FO45,275^A0N,30,30^FDCEP: ${escapeZpl(data.cep)}^FS\n^FO45,325^GB710,3,3^FS\n^FO45,345^A0N,25,25^FDPEDIDO / RASTREIO^FS\n^FO45,382^A0N,34,34^FD${escapeZpl(valueAfterLabel(data.pedido))}^FS\n^FO45,425^A0N,31,31^FD${escapeZpl(valueAfterLabel(data.rastreio))}^FS\n^FO45,475^GB710,3,3^FS\n^FO45,500^GB540,235,4^FS\n^FO605,500^GB150,235,4^FS\n^FO65,520^A0N,25,25^FDPRODUTO^FS\n^FO65,560^A0N,47,47^FB500,3,8,L,0^FD${escapeZpl(data.produto)}^FS\n^FO65,685^A0N,28,28^FDSKU: ${escapeZpl(valueAfterLabel(data.sku))}^FS\n^FO625,520^A0N,25,25^FDQTD^FS\n^FO635,575^A0N,75,75^FD${escapeZpl(valueAfterLabel(data.qtd)||'1')}^FS\n^FO45,770^A0N,24,24^FDCÓDIGOS ORIGINAIS PRESERVADOS ABAIXO^FS\n${barcode||'^FO110,825^BCN,150,Y,N,N^FD'+escapeZpl(valueAfterLabel(data.rastreio)||valueAfterLabel(data.pedido))+'^FS'}\n^XZ`;
+}
+function card(d,i){return `<div class="label"><div class="label-top"><div><div class="section-title">ROTA</div><div class="route">${valueAfterLabel(d.rota)||'REVISAR'}</div></div><div class="market">ETIQUETA ${i+1}</div></div><div class="section"><div class="section-title">DESTINATÁRIO</div><div class="big">${valueAfterLabel(d.destinatario)||'Não identificado'}</div><div class="meta">${d.endereco||'Endereço não identificado'}<br>${d.cep||'CEP não identificado'}</div></div><div class="section"><div class="section-title">PEDIDO / RASTREIO</div><div class="meta"><strong>${valueAfterLabel(d.pedido)||'Pedido não identificado'}</strong><br>${valueAfterLabel(d.rastreio)||'Rastreio não identificado'}</div></div><div class="section order-grid"><div class="order-box"><div class="section-title">PRODUTO</div><div class="big">${d.produto||'Produto não identificado'}</div><div class="meta"><strong>SKU:</strong> ${valueAfterLabel(d.sku)||'não identificado'}</div></div><div class="order-box qty"><div class="section-title">QTD</div><div class="route">${valueAfterLabel(d.qtd)||'1'}</div></div></div><div class="barcode"></div></div>`}
+function process(){
+ const raw=input.value.trim();status.className='status';
+ if(!raw){status.textContent='Cole um ZPL antes de continuar.';status.classList.add('error');return}
+ const labels=[...raw.matchAll(/\^XA[\s\S]*?\^XZ/g)].map(m=>m[0]);
+ if(!labels.length){status.textContent='Não encontrei blocos completos entre ^XA e ^XZ. O original foi mantido.';status.classList.add('error');return}
+ const parsed=labels.map(fields); output=labels.map((z,i)=>build(parsed[i],z)).join('\n\n');
+ preview.innerHTML=parsed.map(card).join('');copy.disabled=download.disabled=false;$('#labelCount').textContent=`${labels.length} etiqueta${labels.length>1?'s':''}`;
+ const missing=parsed.reduce((n,d)=>n+['destinatario','endereco','pedido','produto','sku'].filter(k=>!d[k]).length,0);
+ status.textContent=missing?`Concluído com ${missing} campo(s) para revisão manual.`:`${labels.length} etiqueta(s) otimizada(s) com sucesso.`;status.classList.add(missing?'error':'ok');
+}
+$('#optimize').onclick=process;
+$('#clear').onclick=()=>{input.value='';output='';preview.innerHTML='<div class="empty"><strong>Nenhuma etiqueta processada.</strong><br>Cole um ZPL válido e clique em “Otimizar etiquetas”.</div>';copy.disabled=download.disabled=true;status.textContent='';$('#counter').textContent='0 caracteres';$('#labelCount').textContent='0 etiquetas'};
+$('#example').onclick=()=>{input.value=`^XA\n^CI28\n^FO30,30^A0N,35,35^FDXSP01^FS\n^FO30,80^A0N,25,25^FDDESTINATÁRIO: JOÃO DA SILVA^FS\n^FO30,120^A0N,25,25^FDRua das Flores, 123 - Centro^FS\n^FO30,160^A0N,25,25^FD01000-000^FS\n^FO30,210^A0N,25,25^FDPEDIDO: 250730ABC123^FS\n^FO30,250^A0N,25,25^FDRASTREIO: BR250730ABC123^FS\n^FO30,300^A0N,25,25^FDProduto: Kit organizador de cabos premium^FS\n^FO30,340^A0N,25,25^FDSKU: KIT-CABO-01^FS\n^FO30,380^A0N,25,25^FDQTD: 2^FS\n^FO100,450^BCN,140,Y,N,N^FDBR250730ABC123^FS\n^XZ`;input.dispatchEvent(new Event('input'));process()};
+copy.onclick=async()=>{await navigator.clipboard.writeText(output);status.textContent='ZPL copiado para a área de transferência.';status.className='status ok'};
+download.onclick=()=>{const blob=new Blob([output],{type:'text/plain;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='etiquetas-zpl-otimizadas.txt';a.click();URL.revokeObjectURL(a.href)};
+</script>
+</body>
+</html>
