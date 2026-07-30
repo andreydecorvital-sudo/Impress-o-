@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Etiqueta ZPL Otimizada</title>
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <header><div class="wrap">Etiqueta ZPL Otimizada</div></header>
 <main class="wrap">
-<h1>Fundir tabela real</h1>
-<p class="lead">A etiqueta de envio é mantida. A tabela verdadeira da declaração/checklist é recortada e colocada dentro da etiqueta, sem tentar inventar ou reescrever o produto por OCR.</p>
+<h1>Item grande na etiqueta</h1>
+<p class="lead">A ferramenta lê a descrição do pedido, calcula a quantidade total e escreve uma frase curta e grande diretamente em um espaço livre da etiqueta de envio. Exemplo: <b>10 CAPIM</b>.</p>
 <div class="grid">
 <section class="panel">
 <h2>1. Cole o ZPL completo</h2>
 <textarea id="zpl" placeholder="Cole o ZPL da Shopee com etiqueta de envio e declaração/checklist..."></textarea>
-<div class="actions"><button id="go" type="button" class="primary">Fundir etiquetas</button><button id="clear" type="button" class="ghost">Limpar</button></div>
+<div class="actions"><button id="go" type="button" class="primary">Gerar etiquetas</button><button id="clear" type="button" class="ghost">Limpar</button></div>
 <div id="status" class="status ok">Pronto.</div><div class="progress"><span id="bar"></span></div>
 </section>
 <section class="panel">
@@ -25,6 +25,6 @@
 </section>
 </div>
 </main>
-<script src="loader.js?v=3"></script>
+<script src="loader.js?v=4"></script>
 </body>
 </html>
