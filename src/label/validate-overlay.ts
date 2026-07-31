@@ -24,4 +24,3 @@ export function validateOverlay(
   }
   return errors;
 }
-×M:ã†å¡½İãzëozéÇë‡Û}şöo®<Î;Û·4÷·úsÛ+sùZmé½©bu«^¢÷«•¬­

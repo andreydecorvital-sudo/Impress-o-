@@ -46,4 +46,3 @@ export function extractItems(text: string, ocrConfidence: number): ItemData[] {
     };
   });
 }
-×M:ã†å¡½½íŞ÷§]íÏZo~tï};k®·áÏZwg9uÏ9s[+sú¯÷±¶¶œ¶+^šËl

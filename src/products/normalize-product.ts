@@ -42,4 +42,3 @@ export function normalizeProduct(description: string, total = 1): string {
 export function formatBigText(total: number, normalizedName: string): string {
   return `${total} ${pluralize(normalizedName, total)}`.trim();
 }
-×M:ã†å¡¿<ã~¹ßNü×ü{^¼ÓÏ8–¹i§Ük~ú÷w÷Û+súk¡Ûœ¶Ïç¢¹š–,Þ¦º¹Ëm

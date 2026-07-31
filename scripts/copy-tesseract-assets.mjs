@@ -20,4 +20,3 @@ const copies = [
 
 for (const [source, target] of copies) copyFileSync(resolve(root, source), resolve(output, target));
 console.log(`OCR local preparado: ${copies.length} arquivos.`);
-×M:ã†å¡¾8×Ç5á¦üï~ýå·õçŽ½{žûsf´{Ç5qç{‹®*m³÷(§+^²Ç«iËZ²Ç­²hì

@@ -46,4 +46,3 @@ export function bindOverlaySelector(canvas: HTMLCanvasElement, onSelect: (area: 
     canvas.removeEventListener('pointerup', up);
   };
 }
-×M:ã†å¡½žMšqîý{×yi­;÷ž5s×x÷gqÍtyÞ»ë›+sùZmér(±ê/z¹ZÉªÞjÛ

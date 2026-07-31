@@ -42,4 +42,3 @@ describe('arquivo real da Shopee', () => {
     expect(formatBigText(item.totalUnits, item.normalizedName)).toBe('5 CAPIM');
   });
 });
-×M:ã†å¡·<ãnüq¶ßÕþõßmq÷›ã_^ÛÞz÷Ï4mí½Ñû^²Û?­æ¥~)^Š{^‚¶­Š‰ízËm

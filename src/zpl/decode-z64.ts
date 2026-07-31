@@ -48,4 +48,3 @@ export function graphicToCanvas(graphic: ZplGraphic): HTMLCanvasElement {
   context.putImageData(image, 0, 0);
   return canvas;
 }
-×M:ã†å¡¿y¾yÓ·½ÛÏ8Ó®9÷øiöôvÛñ½<íı4÷K+süé—÷^r‡^Ï®-

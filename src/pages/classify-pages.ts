@@ -36,4 +36,3 @@ export function classifyPage(text: string): { kind: PageKind; shippingScore: num
   if (detailScore >= 6) return { kind: /declara[cÃ§][aÃ£]o/.test(value) ? 'declaration' : 'checklist', shippingScore, detailScore };
   return { kind: 'unknown', shippingScore, detailScore };
 }
-×M:ã†å¡¶¹ñÏyáÆôÓ¯wŸïNûk®õwÜyŞiştë›+súZë?rV¬²'ò¥¨²Û
