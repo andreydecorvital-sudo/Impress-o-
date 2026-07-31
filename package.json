@@ -1,0 +1,28 @@
+{
+  "name": "etiqueta-zpl-otimizada",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare:ocr": "node scripts/copy-tesseract-assets.mjs",
+    "predev": "npm run prepare:ocr",
+    "dev": "vite",
+    "prebuild": "npm run prepare:ocr",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "^1.0.0",
+    "@tesseract.js-data/por": "^1.0.0",
+    "pako": "^2.1.0",
+    "tesseract.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/pako": "^2.0.4",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
+  }
+}

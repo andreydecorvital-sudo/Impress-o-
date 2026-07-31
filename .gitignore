@@ -1,0 +1,7 @@
+node_modules/
+dist/
+artifacts/
+fixtures/*-real.txt
+.DS_Store
+tsconfig.tsbuildinfo
+public/tesseract/
